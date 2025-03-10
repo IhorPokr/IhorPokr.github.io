@@ -1,4 +1,4 @@
-// Script to generate routes-manifest.json for Vercel deployment
+// CommonJS script to generate routes-manifest.json
 const fs = require('fs');
 const path = require('path');
 

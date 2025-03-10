@@ -1,6 +1,6 @@
 {
   "framework": "nextjs",
-  "buildCommand": "npm run install-ts && npm run build",
+  "buildCommand": "npm run install-ts && npm run build && node create-routes-manifest.js",
   "outputDirectory": "out",
   "installCommand": "npm install",
   "routes": [

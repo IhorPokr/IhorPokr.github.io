@@ -1,4 +1,10 @@
 /** @type {import('next').NextConfig} */
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
 const nextConfig = {
   output: 'export',
   images: {
@@ -8,13 +14,10 @@ const nextConfig = {
   webpack: (config, { isServer }) => {
     if (isServer) {
       // Generate a dummy routes-manifest.json file for Vercel deployment
-      const { writeFileSync, mkdirSync } = require('fs');
-      const { join } = require('path');
-      
       try {
-        mkdirSync('./out', { recursive: true });
-        writeFileSync(
-          join('./out', 'routes-manifest.json'),
+        fs.mkdirSync('./out', { recursive: true });
+        fs.writeFileSync(
+          path.join('./out', 'routes-manifest.json'),
           JSON.stringify({ version: 1, pages404: true, basePath: '', redirects: [], headers: [], dynamicRoutes: [], staticRoutes: [], dataRoutes: [], rsc: {} })
         );
       } catch (err) {
