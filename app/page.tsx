@@ -1,11 +1,11 @@
 "use client"
 
 import { useState, useEffect, useRef } from "react"
-import { Terminal } from "@/components/terminal"
-import { About } from "@/components/about"
-import { Projects } from "@/components/projects"
-import { Skills } from "@/components/skills"
-import { Contact } from "@/components/contact"
+import { Terminal } from "../components/terminal";
+import { About } from "../components/about";
+import { Projects } from "../components/projects";
+import { Skills } from "../components/skills";
+import { Contact } from "../components/contact";
 import type { JSX } from "react/jsx-runtime"
 
 export default function Home() {
