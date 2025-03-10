@@ -1,5 +1,4 @@
 {
-  "framework": "nextjs",
   "buildCommand": "npm run install-ts && npm run build",
   "outputDirectory": "out",
   "installCommand": "npm install"

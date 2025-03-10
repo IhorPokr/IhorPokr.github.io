@@ -1,10 +1,10 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
+module.exports = {
   output: 'export',
   images: {
     unoptimized: true,
   },
-  // No custom webpack config - let Vercel handle it
+  // Config for static export
+  trailingSlash: true,
+  distDir: '.next'
 }
-
-export default nextConfig;

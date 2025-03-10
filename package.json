@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && npm run postbuild",
+    "postbuild": "mkdir -p out/.next && cp public/routes-manifest.json out/.next/",
     "start": "next start",
     "lint": "next lint",
     "deploy": "npm run build && touch out/.nojekyll && gh-pages -d out --dotfiles",
