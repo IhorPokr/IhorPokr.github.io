@@ -2,9 +2,5 @@
   "framework": "nextjs",
   "buildCommand": "npm run install-ts && npm run build",
   "outputDirectory": "out",
-  "installCommand": "npm install",
-  "routes": [
-    { "handle": "filesystem" },
-    { "src": "/(.*)", "dest": "/$1" }
-  ]
+  "installCommand": "npm install"
 } 
