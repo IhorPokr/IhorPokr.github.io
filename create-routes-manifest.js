@@ -6,17 +6,27 @@ import { fileURLToPath } from 'url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const outDir = './out';
 
-// Create dummy routes-manifest.json
+// Create dummy routes-manifest.json with complete structure
 const routesManifest = {
-  version: 1,
+  version: 3,
   pages404: true,
-  basePath: '',
+  basePath: "",
   redirects: [],
   headers: [],
   dynamicRoutes: [],
   staticRoutes: [],
   dataRoutes: [],
-  rsc: {}
+  rsc: {},
+  rewrites: {
+    beforeFiles: [],
+    afterFiles: [],
+    fallback: []
+  },
+  routes: {
+    beforeFiles: [],
+    afterFiles: [],
+    fallback: []
+  }
 };
 
 // Ensure output directory exists

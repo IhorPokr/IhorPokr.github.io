@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && node generate-routes-manifest.mjs",
+    "build": "next build && node create-routes-manifest.js && node generate-routes-manifest.mjs",
     "start": "next start",
     "lint": "next lint",
     "deploy": "npm run build && touch out/.nojekyll && gh-pages -d out --dotfiles",
