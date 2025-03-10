@@ -1,0 +1,19 @@
+<svg width="192" height="192" viewBox="0 0 192 192" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="192" height="192" rx="24" fill="#1A1A1A"/>
+  
+  <!-- Terminal window frame -->
+  <rect x="24" y="24" width="144" height="144" rx="6" fill="#2C2C2E" stroke="#3A3A3C" stroke-width="3"/>
+  
+  <!-- Terminal window header -->
+  <rect x="24" y="24" width="144" height="24" rx="6" fill="#2C2C2E" stroke="#3A3A3C" stroke-width="3"/>
+  
+  <!-- Terminal window buttons -->
+  <circle cx="39" cy="36" r="6" fill="#FF453A" stroke="#3A3A3C" stroke-width="1"/>
+  <circle cx="60" cy="36" r="6" fill="#FFCC00" stroke="#3A3A3C" stroke-width="1"/>
+  <circle cx="81" cy="36" r="6" fill="#30D158" stroke="#3A3A3C" stroke-width="1"/>
+  
+  <!-- Terminal prompt and cursor -->
+  <path d="M39 72L63 96L39 120" stroke="#30D158" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="78" y="120" width="60" height="9" rx="1.5" fill="#30D158"/>
+</svg> 
