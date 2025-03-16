@@ -6,6 +6,14 @@ export function Projects() {
       tech: "Swift, UIKit, CoreData, XCode",
       link: "#",
       status: "in-progress"
+    },
+    {
+      name: "3D Car Simulator",
+      description: "A web-based 3D car simulator featuring multiple car types (Standard, Sport, Supercar), realistic driving physics with drifting mechanics, and an interactive environment with roads, tracks, and buildings.",
+      tech: "JavaScript, Three.js, HTML5, CSS3",
+      link: "https://web-car-simulator.vercel.app/",
+      repoLink: "https://github.com/IhorPokr/web-car-simulator",
+      status: "completed"
     }
   ]
 
@@ -31,9 +39,32 @@ export function Projects() {
             </div>
             <div className="text-sm mt-1">{project.description}</div>
             <div className="text-xs text-[var(--apple-subtle)] mt-2">Tech: {project.tech}</div>
-            <div className="text-[var(--apple-blue)] text-sm mt-2 inline-block italic">
-              Development in progress - will share link when available
-            </div>
+            {project.status === "in-progress" ? (
+              <div className="text-[var(--apple-blue)] text-sm mt-2 inline-block italic">
+                Development in progress - will share link when available
+              </div>
+            ) : (
+              <div className="flex space-x-4 mt-2">
+                <a 
+                  href={project.link} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="text-[var(--apple-blue)] text-sm inline-block hover:underline"
+                >
+                  View Project →
+                </a>
+                {project.repoLink && (
+                  <a 
+                    href={project.repoLink} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="text-[var(--apple-blue)] text-sm inline-block hover:underline"
+                  >
+                    View Source Code →
+                  </a>
+                )}
+              </div>
+            )}
           </div>
         ))}
       </div>
